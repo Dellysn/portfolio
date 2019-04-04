@@ -1,6 +1,12 @@
-* {
+
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
+
+*{
   padding: 0px;
-  margin: 0px; }
+  margin: 0px;
+font-family:karla;
+}
 
 body {
   background: #333;
