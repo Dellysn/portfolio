@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *,
 *::before,
 *::after {
@@ -10,6 +11,17 @@
 * {
   padding: 0px;
   margin: 0px;
+=======
+
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
+
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing:border-box;
+font-family:karla;
+>>>>>>> refs/remotes/origin/master
 }
 
 body {
@@ -59,6 +71,7 @@ body {
   align-content: center;
   text-align: center;
   -ms-flex-line-pack: distribute;
+<<<<<<< HEAD
   align-content: space-around;
 }
 .side-one a {
@@ -70,6 +83,22 @@ body {
     width: 100%;
     padding: 5px 0px;
   }
+=======
+  align-content: space-around; }
+  .side-one a {
+    display: block;
+    margin-top: 10px; }
+  @media screen and (max-width: 600px) {
+    .side-two{
+    min-height:400px;
+    }
+    .side-one {
+      width: 100%;
+      padding: 5px 0px; }
+      .side-one a {
+        display: inline-block;
+        cursor: pointer; } }
+>>>>>>> refs/remotes/origin/master
   .side-one a {
     display: inline-block;
     cursor: pointer;
@@ -159,6 +188,7 @@ body {
 }
 
 .media-block {
+<<<<<<< HEAD
   line-height: 50px;
 }
 .media-block a {
@@ -167,6 +197,14 @@ body {
   color: #fff;
   font-size: 2rem;
 }
+=======
+  line-height: 50px; }
+  .media-block a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem; }
+>>>>>>> refs/remotes/origin/master
 
 @media screen and (max-width: 600px) {
   .side-one {
