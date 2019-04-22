@@ -90,6 +90,7 @@ html {
 @media screen and (max-width: 500px) {
   .container {
     display: block;
+    /* overflow: hidden; */
   }
   .slide {
     position: absolute;
@@ -106,5 +107,14 @@ html {
   .slide {
     position: absolute;
     top: 60%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .container {
+    display: block;
+  }
+  .slide {
+    position: absolute;
+    top: 70%;
   }
 }
