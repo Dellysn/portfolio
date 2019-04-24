@@ -4,7 +4,7 @@ html {
   box-sizing: border-box;
 }
 * {
-  box-sizing: inherit;
+  box-sizing: border-box;
   padding: 0px;
   margin: 0px;
   font-family: karla;
@@ -19,7 +19,7 @@ html {
   height: 100vh;
   display: grid;
   grid-template-columns: 350px 750px;
-  grid-gap: 30px;
+  grid-gap: 20px;
   background: #333;
   overflow: hidden;
 }
