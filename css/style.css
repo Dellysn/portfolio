@@ -13,27 +13,34 @@ html {
   #962626
 
 */
-
 .container {
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-columns: 350px 750px;
+  grid-template-columns: 550px 750px;
   grid-gap: 20px;
-  background: #333;
+  /* filter: blur(1px); */
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-position: 500px;
   overflow: hidden;
 }
 .side-one {
-  background: #962626;
+  /* background: #d3c8c8f3; */
+  background: url(../img/tall.jpg) no-repeat;
+  background-size: 700px;
+  background-position-x: 0px;
   padding: 20px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-content: center;
   justify-content: center;
   text-align: center;
-  border-right: solid 2px white;
+  border-right: dashed 2px white;
   /* grid-template-rows: repeat(2, auto); */
 }
+
 .side-one .pro-img img {
   border-radius: 50%;
   width: 200px;
@@ -41,8 +48,11 @@ html {
   margin-bottom: 20px;
 }
 .side-one .pro-info {
-  padding: 5px;
-  font-size: 1.3rem;
+  padding: 8px;
+  background: #333;
+  font-size: 1.5rem;
+  color: #f4f4f4;
+  border: dashed 2px;
 }
 .side-one .feature {
   margin-top: 10px;
@@ -53,10 +63,18 @@ html {
   padding: 5px;
   background: #333;
 }
+.side-one .feature a:hover {
+  border: dashed 2px #fff;
+  transition: border 0.5ms ease;
+}
 
 /* Side Two Styles */
 .side-two {
   padding: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #f4f4f4;
+  font-size: 1.5em;
 }
 .side-two .contact a {
   display: inline;
@@ -83,38 +101,25 @@ html {
   transition: opacity ease 1s;
 }
 
-.bio {
-}
-
 /* Media Queries Max-width 500px */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 375px) {
   .container {
     display: block;
-    /* overflow: hidden; */
+    position: relative;
+    background: #333;
+  }
+  .pro-info {
+    font-size: 0.5em;
+  }
+  .side-two {
+    font-size: 0.8em;
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
   }
   .slide {
-    position: absolute;
     top: 60%;
-  }
-  .side-one {
-    border: none;
-  }
-}
-@media screen and (max-width: 768px) {
-  .container {
-    display: block;
-  }
-  .slide {
-    position: absolute;
-    top: 60%;
-  }
-}
-@media screen and (max-width: 320px) {
-  .container {
-    display: block;
-  }
-  .slide {
-    position: absolute;
-    top: 70%;
   }
 }
