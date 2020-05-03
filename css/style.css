@@ -1,125 +1,196 @@
 @import url("https://fonts.googleapis.com/css?family=Karla");
 
+:root {
+
+  /* HEX */
+  --color1: #ffcdb2ff;
+  --color2: #ffb4a2ff;
+  --color3: #e5989bff;
+  --color4: #b5838dff;
+  --color5: #6d6875ff;
+  --color6: #fb656aff;
+  --transition: all 300ms ease-in-out
+}
+
 html {
   box-sizing: border-box;
 }
+
 * {
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
   font-family: karla;
 }
-/* #333; 
-  #962626
 
-*/
-.container {
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 550px 750px;
-  grid-gap: 20px;
-  /* filter: blur(1px); */
-  background-image: url(../img/background.jpg);
-  background-repeat: no-repeat;
-  background-position: 500px;
-  overflow: hidden;
+::selection {
+  background: var(--color6);
+  color: #fff;
 }
+
+#app {
+  background: #f5f2f2f3;
+  height: 100%;
+}
+
 .side-one {
-  /* background: #d3c8c8f3; */
-  background: url(../img/tall.jpg) no-repeat;
-  background-size: 700px;
-  background-position-x: 0px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
+  /* position: fixed; */
+  background: var(--color5);
+}
+
+.pro-img {
+  /* width: ; */
+  height: 300px
+}
+
+.pro-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.pro-info {
+  height: 70px;
+  line-height: 30px;
   text-align: center;
-  border-right: dashed 2px white;
-  /* grid-template-rows: repeat(2, auto); */
+  margin-top: 1rem;
+  color: var(--color6);
 }
 
-.side-one .pro-img img {
-  border-radius: 50%;
-  width: 200px;
-  border: 2px white solid;
-  margin-bottom: 20px;
-}
-.side-one .pro-info {
-  padding: 8px;
-  background: #333;
-  font-size: 1.5rem;
-  color: #f4f4f4;
-  border: dashed 2px;
-}
-.side-one .feature {
-  margin-top: 10px;
-}
-.side-one .feature a {
-  text-decoration: none;
-  color: #f4f4f4;
-  padding: 5px;
-  background: #333;
-}
-.side-one .feature a:hover {
-  border: dashed 2px #fff;
-  transition: border 0.5ms ease;
+.feature {
+  text-align: center;
+  padding: 1rem 0;
 }
 
-/* Side Two Styles */
-.side-two {
-  padding: 10px;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: #f4f4f4;
-  font-size: 1.5em;
-}
-.side-two .contact a {
-  display: inline;
-  margin-left: 5rem;
-  margin-bottom: 2rem;
-  color: white;
+.feature a {
   text-decoration: none;
-  cursor: pointer;
+  padding: .5rem;
+  color: var(--color2);
 }
-.side-two .contact a:hover {
-  color: #962626;
+
+.feature a:hover {
+  border: solid 1px var(--color6);
 }
-.side-two .contact i {
-  font-size: 4rem;
+
+.feature a.active {
+  border: solid 1px var(--color6)
 }
+
+.bio p {
+  line-height: 40px;
+}
+
+.emphasis {
+  background: var(--color6);
+  padding: .4rem;
+  color: var(--color1);
+  font-weight: 800;
+}
+
 .slide {
+  visibility: hidden;
+  transition: all 300ms;
   position: absolute;
-  top: 35%;
-  opacity: 0;
+}
+
+.side-two {
+  margin: 1rem;
+  background-color: ;
+}
+
+.list-block {
+  list-style-type: none;
+  margin-top: .9rem;
+}
+
+.lists {
+  width: 90%;
+}
+
+.lists {
+  margin-bottom: 1rem;
 }
 
 .slide.current {
-  opacity: 1;
-  transition: opacity ease 1s;
+  visibility: visible;
 }
 
-/* Media Queries Max-width 500px */
-@media screen and (max-width: 375px) {
-  .container {
-    display: block;
-    position: relative;
-    background: #333;
+.message-box {
+  width: 100%;
+
+}
+
+.message-box h3 {
+  font-weight: 800;
+  color: var(--color6);
+  padding: 1rem;
+
+}
+
+label {
+  color: var(--color6);
+
+  display: block;
+}
+
+input {
+  margin-bottom: .5rem;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  outline: 0;
+  border: var(--color6) solid 1px;
+  padding: .6rem;
+  margin-bottom: .5rem;
+}
+
+button {
+  background: none;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+
+button:hover {
+  background: var(--color6);
+  color: #fff;
+}
+
+@media(min-width:500px) {
+  #app {
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+
   }
-  .pro-info {
-    font-size: 0.5em;
+
+  .side-one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--color5);
   }
-  .side-two {
-    font-size: 0.8em;
-    position: relative;
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
-    left: 0px;
+
+  .pro-img {
+    width: 50%;
+    height: 30%;
+
   }
+
+  .pro-img img {
+    border-radius: 50%;
+    border: var(--color6) solid 2px;
+  }
+
   .slide {
-    top: 60%;
+    transform: translateY(-500px);
   }
+
+  .slide.current {
+    transform: translateY(0px);
+  }
+
 }

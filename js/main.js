@@ -1,6 +1,3 @@
-const blogButton = document.getElementById("blog-button");
-const contactButton = document.getElementById("contact-button");
-const aboutButton = document.getElementById("about-button");
 let bio = document.querySelector(".bio");
 let contact = document.querySelector(".contact");
 let blog = document.querySelector(".blog");
@@ -21,6 +18,18 @@ let displayBlog = () => {
   blog.classList.add("current");
 };
 
-contactButton.addEventListener("click", displayContact);
-blogButton.addEventListener("click", displayBlog);
-aboutButton.addEventListener("click", displayAbout);
+function eventHandler(id, event) {
+  const button = document.getElementById(id);
+  button.addEventListener("click", event);
+}
+eventHandler("contact-button", displayContact);
+eventHandler("blog-button", displayBlog);
+eventHandler("about-button", displayAbout);
+
+// buttons.forEach(function (button) {
+//   button.addEventListener("click", function () {
+//     let current = document.getElementsByClassName("active");
+//     current[0].className = current[0].className.replace(" active", " ");
+//     this.className += " active";
+//   });
+// });
