@@ -88,6 +88,18 @@ html {
   line-height: 40px;
 }
 
+.contact .media-block {
+  height: auto;
+  width: 100%;
+}
+.contact .media-block a {
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 1.2rem;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--color6);
+}
 .emphasis {
   background: var(--color6);
   padding: 0.4rem;
