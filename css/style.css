@@ -118,7 +118,22 @@ html {
 .side-two {
   margin: 1rem;
 }
+#project-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+#project-container .project-box {
+  width: 95%;
+  margin-bottom: 1rem;
+  border: solid 2px var(--color6);
+}
 
+#project-container .project-box img {
+  width: 100%;
+  height: 100%;
+}
 .list-block {
   list-style-type: none;
   margin-top: 0.9rem;
@@ -196,7 +211,7 @@ button:hover {
   text-shadow: var(--color1);
 }
 
-@media (min-width: 500px) {
+@media (min-width: 768px) {
   #app {
     height: 100vh;
     display: flex;
@@ -212,8 +227,8 @@ button:hover {
   }
 
   .pro-img {
-    width: 50%;
-    height: 30%;
+    width: 40%;
+    height: 26%;
   }
 
   .pro-img img {
@@ -227,5 +242,16 @@ button:hover {
 
   .slide.current {
     transform: translateY(0px);
+  }
+  #project-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #project-container .project-box {
+    width: 30%;
+    margin: 0.5rem;
   }
 }
